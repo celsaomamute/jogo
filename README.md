@@ -1,95 +1,175 @@
-# jogo
+# arauto
+
+<html>
+<body>
+  <body background = 05.jpg
+  <center>
+     <img src = '08.jpg' width = '980px' height = '550px' />
+    <center>
+   <center>
+           <input type="button" value="porta do motorista aberta" style="width: 300px; height: 100px">
+                 <button onclick="window.location.href='pag3.html'"></button>
+    <center>
+      <center>
+         <input type="button" name="botao" value="porta do motorista fechada" style="width: 300px; height: 100px">
+         <button onclick="window.location.href='pag4.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="porta do carona aberta" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag5.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="porta do carona fechada" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag6.html'"></button>
+     <center>
+      <center>
+    <input type="button" name="botao" value="porta trazeira esquerda aberta" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag7.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="porta trazeira esquerda fechada" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag8.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="porta trazeira direita aberta" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag9.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="porta trazeira direita fechada" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag10.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="mala aberta" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag11.html'"></button>
+    <center>
+      <center>
+    <input type="button" name="botao" value="mala fechada" style="width: 300px; height: 100px">
+    <button onclick="window.location.href='pag12.html'"></button>
+    <center>
+</body>
+</html>
+
+
 <html>
 <head>
-  <center><center>
-<title>Jogo da Velha</title>
-<style type="text/css">
-<!--
-.bla{
-width: 100px;
-height: 100px;
-background: #99ccff;
-font-size: 90px;
-color: #f000;
-cursor: pointer;
-}
-.ble{
-background: #000066;
-}
--->
-</style>
-<script language="JavaScript" type="text/javascript">
-<!--
-letra = "X";
- 
-function joga(celula){
-    celulaclicada = document.getElementById(celula).innerHTML;
-   if (celulaclicada == "X" || celulaclicada == "O"){
-       alert("Opa, este quadrado já foi escolhido!");
-   }else{
-        document.getElementById(celula).innerHTML = letra;
-        if (letra == "X"){
-            letra = "O";
-        }else{
-            letra = "X";
-        }
-   }
-}
- 
-function verif(){
-   c11 = document.getElementById('cel11').innerHTML;
-   c12 = document.getElementById('cel12').innerHTML;
-   c13 = document.getElementById('cel13').innerHTML;
-   c21 = document.getElementById('cel21').innerHTML;
-   c22 = document.getElementById('cel22').innerHTML;
-   c23 = document.getElementById('cel23').innerHTML;
-   c31 = document.getElementById('cel31').innerHTML;
-   c32 = document.getElementById('cel32').innerHTML;
-   c33 = document.getElementById('cel33').innerHTML;
-   if (((c11 != '') && (c12 != '') && (c13 != '') && (c11 == c12) && (c12 == c13)) || ((c11 != '') && (c22 != '') && (c33 != '') && (c11 == c22) && (c22 == c33)) || ((c11 != '') && (c21 != '') && (c31 != '') && (c11 == c21) && (c21 == c31)) || ((c21 != '') && (c22 != '') && (c23 != '') && (c21 == c22) && (c22 == c23)) || ((c31 != '') && (c32 != '') && (c33 != '') && (c31 == c32) && (c32 == c33)) || ((c12 != '') && (c22 != '') && (c32 != '') && (c12 == c22) && (c22 == c32)) || ((c13 != '') && (c23 != '') && (c33 != '') && (c13 == c23) && (c23 == c33)) || ((c31 != '') && (c22 != '') && (c13 != '') && (c31 == c22) && (c22 == c13))){
-       alert('VocÃª ganhou! ParabÃ©ns campeÃ£o!');
-      novo();
-   }
-}
- 
-function novo(){
-    for (i=1; i<4; i++){
-       for (j=1; j<4; j++){
-          nomecelula = 'cel' + i + j
-           document.getElementById(nomecelula).innerHTML = '';
-      
-      }
-   }
-}
- 
- 
-//-->
-</script>
- 
-</head>
+    
+    <input type='button' value= "Situação do Carro" onclick='(SitFM() + SitFC() + SitTE() + SitTD() + SitM())'/> <p>
+    
 <body>
-<table class="ble">
- 
-<tr>
-<td align="center" valign="middle" id="cel11" class="bla" onclick="joga(this.id);verif();"></td>
-<td align="center" valign="middle" id="cel12" class="bla" onclick="joga(this.id);verif();"></td>
-<td align="center" valign="middle" id="cel13" class="bla" onclick="joga(this.id);verif();"></td>
-</tr>
- 
-<tr>
-<td align="center" valign="middle" id="cel21" class="bla" onclick="joga(this.id);verif();"></td>
-<td align="center" valign="middle" id="cel22" class="bla" onclick="joga(this.id);verif();"></td>
-<td align="center" valign="middle" id="cel23" class="bla" onclick="joga(this.id);verif();"></td>
-</tr>
- 
-<tr>
-<td align="center" valign="middle" id="cel31" class="bla" onclick="joga(this.id);verif();"></td>
-<td align="center" valign="middle" id="cel32" class="bla" onclick="joga(this.id);verif();"></td>
-<td align="center" valign="middle" id="cel33" class="bla" onclick="joga(this.id);verif();"></td>
-</tr>
- 
-</table>
-<br><input type="button" name="limpar" value="Novo jogo" onclick="novo();" />
-<center>
+<script>
+
+function SitFM() {
+    if( document.cookie.indexOf('PM=1')==-1){
+            alert("Porta do Motorista Fechada");
+    }
+    else{
+        alert("Porta do Motorista Aberta");
+    }
+}
+//Para verificar a situação da porta do motorista
+
+function SitFC() {
+    if( document.cookie.indexOf('PC=2')==-1){
+            alert("Porta do Carona Fechada");
+    }
+    else{
+        alert("Porta do Carona Aberta");
+    }
+}
+//Para verificar a situação da porta do carona
+
+function SitTE() {
+    if( document.cookie.indexOf('TE=3')==-1){
+            alert("Porta Traseira Esquerda Fechada");
+    }
+    else{
+        alert("Porta Traseira Esquerda Aberta");
+    }
+}
+//Para verificar a porta traseira esquerda
+
+function SitTD() {
+    if( document.cookie.indexOf('TD=4')==-1){
+            alert("Porta Traseira Direita Fechada");
+    }
+    else{
+        alert("Porta Traseira Direita Aberta");
+    }
+}
+//Para verificar a situação da porta traseira direita
+
+function SitM() {
+    if( document.cookie.indexOf('M=5')==-1){
+            alert("Porta Malas Fechada");
+    }
+    else{
+        alert("Porta Malas Aberto");
+    }
+}
+//Para verificar a situação do porta malas
+
+</script>
+</body>
+</html>
+
+<html>
+<head>
+    
+    <input type='button' value= "Situação do Carro" onclick='(SitFM() + SitFC() + SitTE() + SitTD() + SitM())'/> <p>
+    
+<body>
+<script>
+
+function SitFM() {
+    if( document.cookie.indexOf('PM=1')==-1){
+            alert("Porta do Motorista Fechada");
+    }
+    else{
+        alert("Porta do Motorista Aberta");
+    }
+}
+//Para verificar a situação da porta do motorista
+
+function SitFC() {
+    if( document.cookie.indexOf('PC=2')==-1){
+            alert("Porta do Carona Fechada");
+    }
+    else{
+        alert("Porta do Carona Aberta");
+    }
+}
+//Para verificar a situação da porta do carona
+
+function SitTE() {
+    if( document.cookie.indexOf('TE=3')==-1){
+            alert("Porta Traseira Esquerda Fechada");
+    }
+    else{
+        alert("Porta Traseira Esquerda Aberta");
+    }
+}
+//Para verificar a porta traseira esquerda
+
+function SitTD() {
+    if( document.cookie.indexOf('TD=4')==-1){
+            alert("Porta Traseira Direita Fechada");
+    }
+    else{
+        alert("Porta Traseira Direita Aberta");
+    }
+}
+//Para verificar a situação da porta traseira direita
+
+function SitM() {
+    if( document.cookie.indexOf('M=5')==-1){
+            alert("Porta Malas Fechada");
+    }
+    else{
+        alert("Porta Malas Aberto");
+    }
+}
+//Para verificar a situação do porta malas
+
+</script>
 </body>
 </html>
